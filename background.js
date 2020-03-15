@@ -32,7 +32,7 @@ i=result.cross;
 
 
 });
-console.log("yo yo honey singh");
+
 console.log(i);	
 
 function mo(i){
