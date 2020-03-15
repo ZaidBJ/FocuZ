@@ -32,7 +32,7 @@ i=result.cross;
 
 
 });
-
+console.log("yo yo honey singh");
 console.log(i);	
 
 function mo(i){
@@ -169,8 +169,9 @@ mo(i);}
 })
 
 
-chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
-  if (changeInfo.status == 'complete') {
+function check_tabs()
+{
+
 
 chrome.runtime.sendMessage({ck:click}, function(response) {
 	
@@ -217,7 +218,16 @@ console.log(i);
 mo(i);
 
 
-	}	                    }); }   });
+	}	                    });
+
+
+}
+
+chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
+  if (changeInfo.status == 'complete') {
+
+    check_tabs();
+ }   });
 
 
 chrome.storage.local.get(['a','b','c','d','e','f','g','h','i'], function(request) {
@@ -280,3 +290,8 @@ console.log(request) });
 
 console.log(match[0]);
 
+
+chrome.tabs.onActivated.addListener(function(activeInfo) {
+	
+	check_tabs();
+});
