@@ -6,4 +6,3 @@ The user needs to select the sites he want to block.after this whenever user wil
 The extension uses chrome Storage api.
 
 
-# Drag Setup.crx in the google chrome to install the extension
